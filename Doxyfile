@@ -1,0 +1,15 @@
+PROJECT_NAME           = "Matrix Calculator"
+PROJECT_BRIEF          = "Калькулятор матриц. Вариант 5"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Russian
+INPUT                  = include src
+INPUT_ENCODING         = UTF-8
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = YES

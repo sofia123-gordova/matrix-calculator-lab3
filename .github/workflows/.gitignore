@@ -1,0 +1,7 @@
+build/
+build-docker/
+docs/html/
+docs/latex/
+matrix_calculator
+*.o
+.vscode/

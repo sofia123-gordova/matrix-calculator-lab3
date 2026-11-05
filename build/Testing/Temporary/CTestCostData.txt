@@ -1,0 +1,15 @@
+MatrixTest.CreateFilledWithZeros 1 0.0029075
+MatrixTest.InvalidDimensions 1 0.003635
+MatrixTest.FromArrayCopiesData 1 0.0037369
+MatrixTest.NullArray 1 0.0036009
+MatrixTest.Addition 1 0.0040389
+MatrixTest.AdditionWrongSize 1 0.0048194
+MatrixTest.RectangularMultiplication 1 0.0054707
+MatrixTest.MultiplicationWrongSize 1 0.0038871
+MatrixTest.MinimumSize 1 0.0036091
+MatrixTest.EqualsWithTolerance 1 0.0039382
+MatrixTest.EqualsAtToleranceBoundary 1 0.0053978
+MatrixTest.EqualsWrongSize 1 0.0042901
+MatrixTest.NegativeTolerance 1 0.0053547
+MatrixTest.FreeEmptyMatrix 1 0.0038242
+---

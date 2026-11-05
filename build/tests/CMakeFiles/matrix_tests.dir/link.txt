@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/matrix_tests.dir/link.d CMakeFiles/matrix_tests.dir/test_matrix.cpp.o -o matrix_tests  ../libmatrix.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a

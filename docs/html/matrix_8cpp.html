@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Matrix Calculator: Файл src/matrix.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Matrix Calculator
+   </div>
+   <div id="projectbrief">Калькулятор матриц. Вариант 5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('matrix_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл matrix.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="matrix_8h_source.html">matrix.h</a>&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для matrix.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp__incl.png" border="0" usemap="#asrc_2matrix_8cpp" loading="lazy" alt=""/></div>
+<map name="asrc_2matrix_8cpp" id="asrc_2matrix_8cpp">
+<area shape="rect" title=" " alt="" coords="172,5,286,33"/>
+<area shape="rect" href="matrix_8h.html" title="Библиотека операций над матрицами." alt="" coords="5,81,82,109"/>
+<area shape="poly" title=" " alt="" coords="197,36,91,78,89,73,195,31"/>
+<area shape="rect" title=" " alt="" coords="106,81,168,109"/>
+<area shape="poly" title=" " alt="" coords="215,33,166,74,163,69,210,34"/>
+<area shape="rect" title=" " alt="" coords="192,81,266,109"/>
+<area shape="poly" title=" " alt="" coords="231,32,231,67,227,64,227,35"/>
+<area shape="rect" title=" " alt="" coords="290,81,370,109"/>
+<area shape="poly" title=" " alt="" coords="248,31,303,72,297,72,246,36"/>
+<area shape="rect" title=" " alt="" coords="394,81,480,109"/>
+<area shape="poly" title=" " alt="" coords="266,31,388,75,383,76,266,36"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a00b3eed9347d1300084aa9b4b59faa14" id="r_a00b3eed9347d1300084aa9b4b59faa14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00b3eed9347d1300084aa9b4b59faa14">create_matrix</a> (int rows, int cols)</td></tr>
+<tr class="memdesc:a00b3eed9347d1300084aa9b4b59faa14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт матрицу, заполненную нулями.  <br /></td></tr>
+<tr class="memitem:a4a9db3c0de82f0dd0ada2433b56dfaa4" id="r_a4a9db3c0de82f0dd0ada2433b56dfaa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a9db3c0de82f0dd0ada2433b56dfaa4">free_matrix</a> (<a class="el" href="structMatrix.html">Matrix</a> m)</td></tr>
+<tr class="memdesc:a4a9db3c0de82f0dd0ada2433b56dfaa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освобождает память матрицы.  <br /></td></tr>
+<tr class="memitem:a22ddff2afbafb442af6b304fc45da953" id="r_a22ddff2afbafb442af6b304fc45da953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22ddff2afbafb442af6b304fc45da953">matrix_add</a> (<a class="el" href="structMatrix.html">Matrix</a> a, <a class="el" href="structMatrix.html">Matrix</a> b)</td></tr>
+<tr class="memdesc:a22ddff2afbafb442af6b304fc45da953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Складывает две матрицы одинакового размера.  <br /></td></tr>
+<tr class="memitem:acb87434bec1e8f89c319be6fd81a131d" id="r_acb87434bec1e8f89c319be6fd81a131d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb87434bec1e8f89c319be6fd81a131d">matrix_multiply</a> (<a class="el" href="structMatrix.html">Matrix</a> a, <a class="el" href="structMatrix.html">Matrix</a> b)</td></tr>
+<tr class="memdesc:acb87434bec1e8f89c319be6fd81a131d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Умножает две матрицы.  <br /></td></tr>
+<tr class="memitem:a1e1d167b2d075e1e724f94eb9e0259df" id="r_a1e1d167b2d075e1e724f94eb9e0259df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e1d167b2d075e1e724f94eb9e0259df">print_matrix</a> (<a class="el" href="structMatrix.html">Matrix</a> m)</td></tr>
+<tr class="memdesc:a1e1d167b2d075e1e724f94eb9e0259df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит матрицу в терминал.  <br /></td></tr>
+<tr class="memitem:ab25adc6286a85175b01f1545f3e8fbd4" id="r_ab25adc6286a85175b01f1545f3e8fbd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab25adc6286a85175b01f1545f3e8fbd4">matrix_from_array</a> (double *data, int rows, int cols)</td></tr>
+<tr class="memdesc:ab25adc6286a85175b01f1545f3e8fbd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт матрицу из одномерного массива по строкам.  <br /></td></tr>
+<tr class="memitem:a729e674253edd413bd126822d40cb034" id="r_a729e674253edd413bd126822d40cb034"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a729e674253edd413bd126822d40cb034">matrix_equals</a> (<a class="el" href="structMatrix.html">Matrix</a> a, <a class="el" href="structMatrix.html">Matrix</a> b, double tolerance)</td></tr>
+<tr class="memdesc:a729e674253edd413bd126822d40cb034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет равенство матриц с заданной точностью.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a00b3eed9347d1300084aa9b4b59faa14" name="a00b3eed9347d1300084aa9b4b59faa14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b3eed9347d1300084aa9b4b59faa14">&#9670;&#160;</a></span>create_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> create_matrix </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cols</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт матрицу, заполненную нулями. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rows</td><td>Количество строк, больше нуля. </td></tr>
+    <tr><td class="paramname">cols</td><td>Количество столбцов, больше нуля. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Созданная матрица. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>При некорректных размерах. </td></tr>
+    <tr><td class="paramname">std::bad_alloc</td><td>При нехватке памяти. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_cgraph.png" border="0" usemap="#amatrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_cgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_cgraph" id="amatrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_cgraph">
+<area shape="rect" title="Создаёт матрицу, заполненную нулями." alt="" coords="5,5,118,33"/>
+<area shape="rect" href="matrix_8cpp.html#a4a9db3c0de82f0dd0ada2433b56dfaa4" title="Освобождает память матрицы." alt="" coords="166,5,263,33"/>
+<area shape="poly" title=" " alt="" coords="118,17,153,19,147,19,118,22"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_icgraph.png" border="0" usemap="#amatrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_icgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_icgraph" id="amatrix_8cpp_a00b3eed9347d1300084aa9b4b59faa14_icgraph">
+<area shape="rect" title="Создаёт матрицу, заполненную нулями." alt="" coords="299,57,411,85"/>
+<area shape="rect" href="matrix_8cpp.html#a22ddff2afbafb442af6b304fc45da953" title="Складывает две матрицы одинакового размера." alt="" coords="132,5,227,33"/>
+<area shape="poly" title=" " alt="" coords="289,53,227,36,228,31,294,52"/>
+<area shape="rect" href="matrix_8cpp.html#ab25adc6286a85175b01f1545f3e8fbd4" title="Создаёт матрицу из одномерного массива по строкам." alt="" coords="108,57,251,85"/>
+<area shape="poly" title=" " alt="" coords="281,72,252,74,251,69,286,71"/>
+<area shape="rect" href="matrix_8cpp.html#acb87434bec1e8f89c319be6fd81a131d" title="Умножает две матрицы." alt="" coords="117,109,242,137"/>
+<area shape="poly" title=" " alt="" coords="294,90,229,111,228,106,288,90"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Демонстрирует операции над матрицами." alt="" coords="5,57,60,85"/>
+<area shape="poly" title=" " alt="" coords="123,41,61,64,59,59,125,36"/>
+<area shape="poly" title=" " alt="" coords="90,73,61,74,59,69,94,70"/>
+<area shape="poly" title=" " alt="" coords="122,105,60,83,61,78,126,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4a9db3c0de82f0dd0ada2433b56dfaa4" name="a4a9db3c0de82f0dd0ada2433b56dfaa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a9db3c0de82f0dd0ada2433b56dfaa4">&#9670;&#160;</a></span>free_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Освобождает память матрицы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Матрица для освобождения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>После вызова исходную структуру нужно обнулить. </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_a4a9db3c0de82f0dd0ada2433b56dfaa4_icgraph.png" border="0" usemap="#amatrix_8cpp_a4a9db3c0de82f0dd0ada2433b56dfaa4_icgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_a4a9db3c0de82f0dd0ada2433b56dfaa4_icgraph" id="amatrix_8cpp_a4a9db3c0de82f0dd0ada2433b56dfaa4_icgraph">
+<area shape="rect" title="Освобождает память матрицы." alt="" coords="459,135,557,162"/>
+<area shape="rect" href="matrix_8cpp.html#a00b3eed9347d1300084aa9b4b59faa14" title="Создаёт матрицу, заполненную нулями." alt="" coords="299,84,411,112"/>
+<area shape="poly" title=" " alt="" coords="447,129,399,115,400,110,452,129"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Демонстрирует операции над матрицами." alt="" coords="5,84,60,112"/>
+<area shape="poly" title=" " alt="" coords="447,160,374,171,289,175,197,170,151,162,107,151,73,135,48,115,49,110,76,130,109,146,152,157,198,164,289,169,374,165,441,160"/>
+<area shape="rect" href="matrix_8cpp.html#a22ddff2afbafb442af6b304fc45da953" title="Складывает две матрицы одинакового размера." alt="" coords="132,5,227,33"/>
+<area shape="poly" title=" " alt="" coords="311,77,250,48,221,36,221,31,252,43,316,76"/>
+<area shape="rect" href="matrix_8cpp.html#ab25adc6286a85175b01f1545f3e8fbd4" title="Создаёт матрицу из одномерного массива по строкам." alt="" coords="108,57,251,85"/>
+<area shape="poly" title=" " alt="" coords="281,87,251,85,251,79,286,87"/>
+<area shape="rect" href="matrix_8cpp.html#acb87434bec1e8f89c319be6fd81a131d" title="Умножает две матрицы." alt="" coords="117,109,242,137"/>
+<area shape="poly" title=" " alt="" coords="281,109,243,117,242,111,286,108"/>
+<area shape="poly" title=" " alt="" coords="119,41,109,48,53,86,50,82,106,44,123,38"/>
+<area shape="poly" title=" " alt="" coords="90,89,61,95,59,91,94,85"/>
+<area shape="poly" title=" " alt="" coords="99,111,61,105,60,100,103,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a22ddff2afbafb442af6b304fc45da953" name="a22ddff2afbafb442af6b304fc45da953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ddff2afbafb442af6b304fc45da953">&#9670;&#160;</a></span>matrix_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> matrix_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Складывает две матрицы одинакового размера. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Первая матрица. </td></tr>
+    <tr><td class="paramname">b</td><td>Вторая матрица. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новая матрица с результатом сложения. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если размеры различаются. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_a22ddff2afbafb442af6b304fc45da953_cgraph.png" border="0" usemap="#amatrix_8cpp_a22ddff2afbafb442af6b304fc45da953_cgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_a22ddff2afbafb442af6b304fc45da953_cgraph" id="amatrix_8cpp_a22ddff2afbafb442af6b304fc45da953_cgraph">
+<area shape="rect" title="Складывает две матрицы одинакового размера." alt="" coords="5,5,101,33"/>
+<area shape="rect" href="matrix_8cpp.html#a00b3eed9347d1300084aa9b4b59faa14" title="Создаёт матрицу, заполненную нулями." alt="" coords="149,5,261,33"/>
+<area shape="poly" title=" " alt="" coords="101,17,136,19,131,19,101,22"/>
+<area shape="rect" href="matrix_8cpp.html#a4a9db3c0de82f0dd0ada2433b56dfaa4" title="Освобождает память матрицы." alt="" coords="309,5,406,33"/>
+<area shape="poly" title=" " alt="" coords="262,17,296,19,291,19,262,22"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_a22ddff2afbafb442af6b304fc45da953_icgraph.png" border="0" usemap="#amatrix_8cpp_a22ddff2afbafb442af6b304fc45da953_icgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_a22ddff2afbafb442af6b304fc45da953_icgraph" id="amatrix_8cpp_a22ddff2afbafb442af6b304fc45da953_icgraph">
+<area shape="rect" title="Складывает две матрицы одинакового размера." alt="" coords="108,5,203,33"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Демонстрирует операции над матрицами." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,95,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a729e674253edd413bd126822d40cb034" name="a729e674253edd413bd126822d40cb034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729e674253edd413bd126822d40cb034">&#9670;&#160;</a></span>matrix_equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool matrix_equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет равенство матриц с заданной точностью. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Первая матрица. </td></tr>
+    <tr><td class="paramname">b</td><td>Вторая матрица. </td></tr>
+    <tr><td class="paramname">tolerance</td><td>Допустимая абсолютная разница элементов. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если размеры совпадают и разницы не больше tolerance. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если точность отрицательная или не конечная. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_a729e674253edd413bd126822d40cb034_icgraph.png" border="0" usemap="#amatrix_8cpp_a729e674253edd413bd126822d40cb034_icgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_a729e674253edd413bd126822d40cb034_icgraph" id="amatrix_8cpp_a729e674253edd413bd126822d40cb034_icgraph">
+<area shape="rect" title="Проверяет равенство матриц с заданной точностью." alt="" coords="108,5,222,33"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Демонстрирует операции над матрицами." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,94,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab25adc6286a85175b01f1545f3e8fbd4" name="ab25adc6286a85175b01f1545f3e8fbd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25adc6286a85175b01f1545f3e8fbd4">&#9670;&#160;</a></span>matrix_from_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> matrix_from_array </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cols</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт матрицу из одномерного массива по строкам. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Массив минимум из rows * cols элементов. </td></tr>
+    <tr><td class="paramname">rows</td><td>Количество строк. </td></tr>
+    <tr><td class="paramname">cols</td><td>Количество столбцов. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Матрица с копией элементов массива. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>При неверных параметрах. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_cgraph.png" border="0" usemap="#amatrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_cgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_cgraph" id="amatrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_cgraph">
+<area shape="rect" title="Создаёт матрицу из одномерного массива по строкам." alt="" coords="5,5,149,33"/>
+<area shape="rect" href="matrix_8cpp.html#a00b3eed9347d1300084aa9b4b59faa14" title="Создаёт матрицу, заполненную нулями." alt="" coords="197,5,309,33"/>
+<area shape="poly" title=" " alt="" coords="149,17,184,19,179,19,149,22"/>
+<area shape="rect" href="matrix_8cpp.html#a4a9db3c0de82f0dd0ada2433b56dfaa4" title="Освобождает память матрицы." alt="" coords="357,5,454,33"/>
+<area shape="poly" title=" " alt="" coords="310,17,344,19,339,19,310,22"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_icgraph.png" border="0" usemap="#amatrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_icgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_icgraph" id="amatrix_8cpp_ab25adc6286a85175b01f1545f3e8fbd4_icgraph">
+<area shape="rect" title="Создаёт матрицу из одномерного массива по строкам." alt="" coords="108,5,251,33"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Демонстрирует операции над матрицами." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,94,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acb87434bec1e8f89c319be6fd81a131d" name="acb87434bec1e8f89c319be6fd81a131d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb87434bec1e8f89c319be6fd81a131d">&#9670;&#160;</a></span>matrix_multiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> matrix_multiply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Умножает две матрицы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Первая матрица. </td></tr>
+    <tr><td class="paramname">b</td><td>Вторая матрица. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новая матрица с результатом умножения. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Если a.cols не равно b.rows. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_cgraph.png" border="0" usemap="#amatrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_cgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_cgraph" id="amatrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_cgraph">
+<area shape="rect" title="Умножает две матрицы." alt="" coords="5,5,131,33"/>
+<area shape="rect" href="matrix_8cpp.html#a00b3eed9347d1300084aa9b4b59faa14" title="Создаёт матрицу, заполненную нулями." alt="" coords="179,5,291,33"/>
+<area shape="poly" title=" " alt="" coords="131,17,165,19,160,19,131,22"/>
+<area shape="rect" href="matrix_8cpp.html#a4a9db3c0de82f0dd0ada2433b56dfaa4" title="Освобождает память матрицы." alt="" coords="339,5,436,33"/>
+<area shape="poly" title=" " alt="" coords="292,17,326,19,321,19,292,22"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_icgraph.png" border="0" usemap="#amatrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_icgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_icgraph" id="amatrix_8cpp_acb87434bec1e8f89c319be6fd81a131d_icgraph">
+<area shape="rect" title="Умножает две матрицы." alt="" coords="108,5,233,33"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Демонстрирует операции над матрицами." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="90,20,60,22,60,17,95,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1e1d167b2d075e1e724f94eb9e0259df" name="a1e1d167b2d075e1e724f94eb9e0259df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1d167b2d075e1e724f94eb9e0259df">&#9670;&#160;</a></span>print_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит матрицу в терминал. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Матрица для вывода. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8cpp_a1e1d167b2d075e1e724f94eb9e0259df_icgraph.png" border="0" usemap="#amatrix_8cpp_a1e1d167b2d075e1e724f94eb9e0259df_icgraph" loading="lazy" alt=""/></div>
+<map name="amatrix_8cpp_a1e1d167b2d075e1e724f94eb9e0259df_icgraph" id="amatrix_8cpp_a1e1d167b2d075e1e724f94eb9e0259df_icgraph">
+<area shape="rect" title="Выводит матрицу в терминал." alt="" coords="108,5,209,33"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Демонстрирует операции над матрицами." alt="" coords="5,5,60,33"/>
+<area shape="poly" title=" " alt="" coords="89,20,60,22,60,17,94,18"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="matrix_8cpp.html">matrix.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
