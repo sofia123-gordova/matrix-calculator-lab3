@@ -1,5 +1,0 @@
-if(EXISTS "/home/sonia_gordova/laba3/matrix_calculator/build/tests/matrix_tests[1]_tests.cmake")
-  include("/home/sonia_gordova/laba3/matrix_calculator/build/tests/matrix_tests[1]_tests.cmake")
-else()
-  add_test(matrix_tests_NOT_BUILT matrix_tests_NOT_BUILT)
-endif()
